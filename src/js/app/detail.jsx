@@ -3,7 +3,7 @@ import 'url-search-params-polyfill';
 
 import Header from '../components/detail/header';
 import Details from '../components/detail/detail';
-import { getDdata } from '../service';
+import { getData } from '../service';
 
 export default class Detail extends Component {
     constructor(props) {
@@ -16,7 +16,7 @@ export default class Detail extends Component {
     };
 
     componentDidMount() {
-        getDdata(`https://api.github.com/repos/angular/angular.js/issues/${this.id}`).then(data => {
+        getData(`https://api.github.com/repos/angular/angular.js/issues/${this.id}`).then(data => {
             this.setState({
                 detail: data
             })

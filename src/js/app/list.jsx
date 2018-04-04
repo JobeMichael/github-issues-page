@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { getDdata } from '../service'
+import { getData } from '../service'
 
 import ListItem from '../components/list/listitem'
 
@@ -12,7 +12,7 @@ export default class List extends Component {
         }
     };
     componentDidMount() {
-        getDdata('https://api.github.com/repos/angular/angular.js/issues').then(data => {
+        getData('https://api.github.com/repos/angular/angular.js/issues').then(data => {
             this.setState({
                 list: data
             })
