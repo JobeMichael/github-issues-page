@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import 'url-search-params-polyfill';
 
-import { getDdata } from '../service'
+import Header from '../components/detail/header';
+import { getDdata } from '../service';
 
 export default class Detail extends Component {
     constructor(props) {
@@ -21,9 +22,10 @@ export default class Detail extends Component {
         })
     }
     render() {
-        console.log('Details', this.state.detail);
         return (
-            <h1>Detail Page</h1>
+            <Fragment>
+                <Header data={this.state.detail} />
+            </Fragment>
         )
     }
 }
