@@ -14,6 +14,7 @@ export default class App extends Component {
       <BrowserRouter>
         <Fragment>
           <Route path='/' exact component={List} />
+          <Route path='/list' exact component={List} />
           <Route path='/detail' exact component={Detail} />
         </Fragment>
       </BrowserRouter>
