@@ -1,1 +1,4 @@
-@import './app/list.css'
+@import './app/list.css';
+body {
+    font-family: 'Open Sans';
+}

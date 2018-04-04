@@ -21,7 +21,7 @@ export default class List extends Component {
     render() {
         return (
             <Fragment>
-                <h1>List Page</h1>
+                <h1>Angular Issues</h1>
                 <div className="list-header">
                     <div className='list-header-left'>Open Issues</div>
                     <div className='list-header-right'><a href='#'>Sort</a></div>

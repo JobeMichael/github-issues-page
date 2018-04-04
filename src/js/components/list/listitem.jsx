@@ -12,22 +12,29 @@ const ListItem = (props) => {
                 // hash: `#${props.number}`,
 
             }} className="issue-list-item">
-                <span className="number">#{props.number}</span>
                 <strong className="item-title">
                     {props.title}
                 </strong>
-                <span className="item-openedBy">
-                    Opened on
-                    {formatDate(props.created_at)} by
-                    <strong>{props.user.login}}</strong>
-                </span>
                 <span className="labels">
                     {props.labels.map((elem, index) => {
                         return <span key={`Labels_${index}`} className="label" style={{ backgroundColor: `#${elem.color}` }}>
                             {elem.name}
                         </span>
                     })}
-                </span>
+                </span>{
+                    props.comments > 0
+                        ? <span className="comments"><strong>comments : </strong>{props.comments}</span>
+                        : ''
+                }
+
+                <div className='issue-list-history'>
+                    <span className="number">#{props.number}</span>
+                    <span className="item-openedBy">
+                        {`opened on ${formatDate(props.created_at)} by `}
+                        <strong> {props.user.login}</strong>
+                    </span>
+                </div>
+
             </Link>
         </Fragment>
     );

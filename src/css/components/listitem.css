@@ -1,0 +1,41 @@
+.issue-list-item {
+    padding: 10px 20px 10px 20px;
+    display: block;
+    text-decoration: none;
+    border-bottom: 1px #e1e4e8 solid !important;
+}
+
+.issue-list-item:hover {
+    background-color: #f6f8fa;
+}
+
+.issue-list-item .item-title {
+    font-size: 15px;
+    color: #24292e;
+}
+
+.issue-list-history {
+    font-size: 12px;
+    color: #586069;
+    margin-top: 4px;
+}
+
+.issue-list-item .labels .label {
+    color: black;
+    font-size: 11px;
+    padding: 2px 7px 3px 7px;
+    font-weight: bold;
+    margin-left: 12px;
+    border-radius: 2px;
+    white-space: nowrap;
+}
+
+.issue-list-history span {
+    margin-left: 5px;
+}
+
+.issue-list-item .comments {
+    font-size: 12px;
+    float: right;
+    color: #656077;
+}
