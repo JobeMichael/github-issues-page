@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import 'url-search-params-polyfill';
 
 import Header from '../components/detail/header';
+import Details from '../components/detail/detail';
 import { getDdata } from '../service';
 
 export default class Detail extends Component {
@@ -25,6 +26,7 @@ export default class Detail extends Component {
         return (
             <Fragment>
                 <Header data={this.state.detail} />
+                <Details data={this.state.detail} />
             </Fragment>
         )
     }

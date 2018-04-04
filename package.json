@@ -20,6 +20,7 @@
   "dependencies": {
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-markdown": "^3.3.0",
     "react-router-dom": "^4.2.2",
     "url-search-params-polyfill": "^3.0.0"
   }
