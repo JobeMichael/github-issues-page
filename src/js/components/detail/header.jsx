@@ -9,9 +9,6 @@ const Header = (props) => {
             {typeof props.data.user !== 'undefined'
                 ? <Fragment>
                     <h1>{props.data.title}</h1> <span className='detail-number'>{props.data.number}</span>
-                    <div className='detail-open-issue-icon'>
-                        <i className='icono-exclamationCircle'></i>
-                    </div>
                     <History data={props.data} />
                 </Fragment>
                 : ''

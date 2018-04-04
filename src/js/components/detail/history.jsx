@@ -9,7 +9,7 @@ const History = (props) => {
                     {`opened on ${formatDate(props.data.created_at)} by `}
                     <strong> {props.data.user.login}</strong>
                 </span>
-                <span>{props.data.comments} comments</span>
+                <span>  {props.data.comments} comments</span>
             </div>
         </Fragment>
     );

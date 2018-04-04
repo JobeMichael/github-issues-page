@@ -8,13 +8,12 @@ import ReactMarkdown from 'react-markdown';
 
 const Comments = (props) => {
     return (
-
-
         <Fragment>
             <div className='profile-image'>
-                <img />
+                <img src={props.data.user.avatar_url} />
+                <span>{props.data.user.login}</span>
             </div>
-            <div className='comments'>
+            <div className='comments-wrapper'>
                 <div className="list-header">
                     <div className='list-header-left'><History data={props.data} /></div>
                     <div className='list-header-right'></div>

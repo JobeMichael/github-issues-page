@@ -34,8 +34,8 @@ export default class Detail extends Component {
             <Fragment>
                 <Header data={this.state.detail} />
                 <Details data={this.state.detail} />
-                {this.state.commentsData.map((ele) => {
-                    return <Comments data={ele} />
+                {this.state.commentsData.map((ele, index) => {
+                    return <Comments key={`Comments_${index}`} data={ele} />
                 })}
             </Fragment>
         )

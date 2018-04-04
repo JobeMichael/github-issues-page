@@ -1,0 +1,63 @@
+.profile-image {
+    float: left;
+    width: 5%;
+    clear: both;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.profile-image img {
+    width: 30px;
+    height: 30px;
+}
+
+.profile-image span {
+    font-size: 12px;
+    font-weight: bold;
+    word-wrap: break-word;
+}
+
+.comments-wrapper {
+    float: left;
+    width: 80%;
+    margin-top: 30px;
+    margin-left: 19px;
+    height: auto;
+}
+
+.comments-wrapper:last-child {
+    margin-bottom: 100px;
+}
+
+.comments-wrapper:after {
+    clear: both;
+}
+
+.result {
+    padding: 20px;
+}
+
+.result p {
+    font-size: 13px;
+}
+
+.result p strong {
+    font-size: 16px;
+}
+
+.result ul li {
+    font-size: 12px;
+}
+
+.result p a {
+    word-break: break-all;
+}
+
+.result pre {
+    background: #f5f1f1;
+    padding: 9px;
+}
+
+ul li {
+    list-style-type: none;
+}

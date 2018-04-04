@@ -1,4 +1,5 @@
 @import './app/list.css';
+@import './app/detail.css';
 body {
     font-family: 'Open Sans';
 }
