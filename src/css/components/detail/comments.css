@@ -61,3 +61,22 @@
 ul li {
     list-style-type: none;
 }
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .comments-wrapper {
+        clear: both;
+        width: 96%;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 1px;
+    }
+    .profile-image {
+        float: left;
+        width: 100%
+    }
+    .profile-image span {
+        display: block;
+        clear: both;
+    }
+}

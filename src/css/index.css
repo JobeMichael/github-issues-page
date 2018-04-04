@@ -3,3 +3,16 @@
 body {
     font-family: 'Open Sans';
 }
+
+#app {
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 768px) {
+    #app {
+        width: 96%;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+}
