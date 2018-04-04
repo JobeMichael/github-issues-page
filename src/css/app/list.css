@@ -1,0 +1,32 @@
+.list-header {
+    position: relative;
+    margin-top: 20px;
+    background-color: #f6f8fa;
+    border: 1px solid #e1e4e8;
+    border-radius: 3px 3px 0 0;
+    padding: 10px 20px;
+}
+
+.list-header::before {
+    display: table;
+    content: ""
+}
+
+.list-header::after {
+    display: table;
+    clear: both;
+    content: ""
+}
+
+.list-header-left {
+    float: left;
+}
+
+.list-header-right {
+    float: right;
+}
+
+.issue-list {
+    border: 1px #e1e4e8 solid !important;
+    border-top: 0px;
+}

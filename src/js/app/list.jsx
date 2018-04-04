@@ -22,9 +22,15 @@ export default class List extends Component {
         return (
             <Fragment>
                 <h1>List Page</h1>
-                {this.state.list.map((ele, index) => {
-                    return <ListItem key={`ListItem_${index}`} {...ele} />
-                })}
+                <div className="list-header">
+                    <div className='list-header-left'>Open Issues</div>
+                    <div className='list-header-right'><a href='#'>Sort</a></div>
+                </div>
+                <div className='issue-list'>
+                    {this.state.list.map((ele, index) => {
+                        return <ListItem key={`ListItem_${index}`} {...ele} />
+                    })}
+                </div>
 
             </Fragment>
         )
