@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { getDdata } from '../service'
 
 import ListItem from '../components/list/listitem'
@@ -20,13 +20,13 @@ export default class List extends Component {
     }
     render() {
         return (
-            <div>
+            <Fragment>
                 <h1>List Page</h1>
                 {this.state.list.map((ele, index) => {
                     return <ListItem key={`ListItem_${index}`} {...ele} />
                 })}
 
-            </div>
+            </Fragment>
         )
     }
 }
