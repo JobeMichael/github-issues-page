@@ -4,7 +4,7 @@ import Adapter from "enzyme-adapter-react-16";
 Enzyme.configure({
     adapter: new Adapter()
 });
-
+global.fetch = require('jest-fetch-mock');
 global.requestAnimationFrame = function (callback) {
     setTimeout(callback, 0);
 };
