@@ -3,6 +3,7 @@ import 'url-search-params-polyfill';
 
 import Header from '../components/detail/header';
 import Details from '../components/detail/detail';
+import Comments from '../components/detail/comments'
 import { getData } from '../service';
 
 export default class Detail extends Component {
@@ -11,13 +12,19 @@ export default class Detail extends Component {
         const search = props.location.search; // could be '?foo=bar'
         this.id = new URLSearchParams(search).get('id');
         this.state = {
-            detail: {}
+            detail: {},
+            commentsData: []
         }
     };
 
     componentDidMount() {
-        getData(`https://api.github.com/repos/angular/angular.js/issues/${this.id}`).then(data => {
+        let commentsData;
+        getData(`https://api.github.com/repos/angular/angular.js/issues/${this.id}/comments`).then(data => {
+            commentsData = data;
+            return getData(`https://api.github.com/repos/angular/angular.js/issues/${this.id}`)
+        }).then((data) => {
             this.setState({
+                commentsData: commentsData,
                 detail: data
             })
         })
@@ -27,6 +34,9 @@ export default class Detail extends Component {
             <Fragment>
                 <Header data={this.state.detail} />
                 <Details data={this.state.detail} />
+                {this.state.commentsData.map((ele) => {
+                    return <Comments data={ele} />
+                })}
             </Fragment>
         )
     }
