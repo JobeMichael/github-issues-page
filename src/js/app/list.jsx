@@ -24,7 +24,7 @@ export default class List extends Component {
                 <h1>Angular Issues</h1>
                 <div className="list-header">
                     <div className='list-header-left'>Open Issues</div>
-                    <div className='list-header-right'><a href='#'>Sort</a></div>
+                    <div className='list-header-right'><a href='#'></a></div>
                 </div>
                 <div className='issue-list'>
                     {this.state.list.map((ele, index) => {

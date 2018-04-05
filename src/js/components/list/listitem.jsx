@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { formatDate } from '../../utils'
+import { formatDate, isBlack } from '../../utils'
 import { Link } from 'react-router-dom'
 
 const ListItem = (props) => {
@@ -19,7 +19,8 @@ const ListItem = (props) => {
                     </strong>
                     <span className="labels">
                         {props.labels.map((elem, index) => {
-                            return <span key={`Labels_${index}`} className="label" style={{ backgroundColor: `#${elem.color}` }}>
+                            return <span key={`Labels_${index}`} className="label"
+                                style={{ backgroundColor: `#${elem.color}`, color: isBlack(elem.color) ? 'white' : 'black' }}>
                                 {elem.name}
                             </span>
                         })}

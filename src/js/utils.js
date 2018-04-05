@@ -1,3 +1,5 @@
+import tinycolor from 'tinycolor2';
+
 export const formatDate = (date) => {
     var monthNames = [
         "January", "February", "March",
@@ -11,4 +13,9 @@ export const formatDate = (date) => {
     var year = newData.getFullYear();
 
     return `${day} ${monthNames[monthIndex]} ${year}`;
+}
+
+export const isBlack = (color) => {
+    const c = new tinycolor(`#${color}`);
+    return c.isDark();
 }
