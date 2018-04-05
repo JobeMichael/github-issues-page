@@ -12,7 +12,7 @@ export default class List extends Component {
         }
     };
     componentDidMount() {
-        getData('https://api.github.com/repos/angular/angular.js/issues').then(data => {
+        getData().then(data => {
             this.setState({
                 list: data
             })

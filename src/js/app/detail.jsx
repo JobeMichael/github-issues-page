@@ -19,9 +19,9 @@ export default class Detail extends Component {
 
     componentDidMount() {
         let commentsData;
-        getData(`https://api.github.com/repos/angular/angular.js/issues/${this.id}/comments`).then(data => {
+        getData(`/${this.id}/comments`).then(data => {
             commentsData = data;
-            return getData(`https://api.github.com/repos/angular/angular.js/issues/${this.id}`)
+            return getData(`/${this.id}`)
         }).then((data) => {
             this.setState({
                 commentsData: commentsData,
@@ -34,10 +34,12 @@ export default class Detail extends Component {
             <Fragment>
                 <Header data={this.state.detail} />
                 <Details data={this.state.detail} />
-                {this.state.commentsData.map((ele, index) => {
-                    return <Comments key={`Comments_${index}`} data={ele} />
-                })}
-            </Fragment>
+                {
+                    this.state.commentsData.map((ele, index) => {
+                        return <Comments key={`Comments_${index}`} data={ele} />
+                    })
+                }
+            </Fragment >
         )
     }
 }

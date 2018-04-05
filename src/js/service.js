@@ -1,12 +1,5 @@
-export const getData = (url) => {
-    return new Promise((resolve, reject) => {
-        fetch(url)
-            .then((res) => {
-                res.json().then((data) => { // json() - promise method
-                    resolve(data)
-                })
-            }).catch((err) => {
-                console.log(err);
-            })
-    });
+export const SERIVCE_URL = 'https://api.github.com/repos/angular/angular.js/issues';
+
+export const getData = (service = '') => {
+    return fetch(`${SERIVCE_URL}${service}`).then(data => data.json());
 }
