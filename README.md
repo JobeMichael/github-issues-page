@@ -1,12 +1,12 @@
 # GitHub Issues List
 
-Sample application to retrive and display GitHub issues List and when click on the issue it will take you to the detail Section.
-You can find all comments related to this issue and other item too.
+Simple responsive react application to display list of angular github issues (using githup api). When click on the each issue, it will take you to the datail page.
 
-I have used ReactJS to develop this applicaiton. Simple routing added to switch between pages.
- Also, I have added few testing using JEST and ENZYME tools.
 
-# Setup
+Used ReactJS to develop this applicaiton also added simple routing to switch between pages.
+Used JEST and ENZYME to write unit testing. 
+
+# Setup and Run
 
 ` Clone the solution `
 
